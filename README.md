@@ -1,79 +1,36 @@
-🧭 1. Analyse du besoin et cadrage du projet
+# Conception d'un réseau local — Schéma et plan de déploiement
 
-Objectif : comprendre le contexte et les contraintes
+## Contexte
 
-Étudier le cahier des charges (bâtiment, besoins d’IT Conseil, 320 postes)
-Identifier les contraintes : évolutivité, sécurité, mutualisation du réseau
-Comprendre les attentes du client (Hill Start / DSI)
+Ce projet porte sur la conception complète d'un réseau local d'entreprise, depuis l'analyse du besoin jusqu'à la planification de son déploiement, en respectant les bonnes pratiques de sécurité recommandées par l'ANSSI.
 
-👉 Compétences : analyse fonctionnelle, compréhension d’un besoin client, lecture de DAT
+## Démarche
 
-🏗️ 2. Conception de l’architecture réseau
-a) Schéma physique
-Placement des équipements (switchs, routeur, bornes WiFi, caméras…)
-Répartition par salles et étages
-Capacité et rôle de chaque switch
+1. **Schéma physique** : implantation des équipements réseau (switches, points d'accès, câblage), en tenant compte de la capacité et du nombre de ports disponibles sur chaque switch.
+2. **Schéma logique** : découpage en VLAN par usage/service, définition des sous-réseaux et des masques associés pour cloisonner les flux.
+3. **Plan d'adressage IP** : répartition entre adressage dynamique (DHCP) pour les postes utilisateurs et adressage statique pour les équipements critiques (serveurs, imprimantes réseau, équipements d'infrastructure).
+4. **Planification du déploiement** : diagramme de Gantt détaillant les phases du projet, les dépendances entre tâches et les délais associés.
 
-👉 Compétences : architecture réseau, dimensionnement matériel
+## Bonnes pratiques appliquées
 
-b) Schéma logique
-Création des VLAN (ex : admin, utilisateurs, invités, serveurs)
-Définition des sous-réseaux et masques
-Règles de communication entre VLAN
+- Segmentation réseau par VLAN pour limiter la propagation d'un incident de sécurité.
+- Séparation logique des flux utilisateurs, serveurs et administration.
+- Plan d'adressage cohérent, documenté et évolutif.
+- Démarche de projet structurée (jalons, dépendances, délais) plutôt qu'un déploiement improvisé.
 
-👉 Compétences : TCP/IP, segmentation réseau, sécurité logique
+## Outils utilisés
 
-📡 3. Plan d’adressage IP
-Définition des plages IP par VLAN
-Distinction IP statiques / DHCP
-Calcul des masques adaptés
-Gestion des broadcast et optimisation des plages
+- **draw.io** : réalisation des schémas physique et logique.
+- **Excel** : plan d'adressage IP et diagramme de Gantt.
 
-👉 Compétences : adressage IPv4, DHCP, planification réseau
+## Structure du dépôt
 
-🔐 4. Intégration des bonnes pratiques de sécurité
-Isolation des réseaux via VLAN
-Réduction des risques d’accès non autorisés
-Préparation à une architecture sécurisée et scalable
+```
+├── Pic_Thomas_1_DAT_012026.pdf     # Dossier d'Architecture Technique (schémas, adressage, choix techniques)
+├── Pic_Thomas_2_Gantt_012026.pdf   # Planning de déploiement (diagramme de Gantt)
+└── README.md
+```
 
-👉 Compétences : cybersécurité réseau, bonnes pratiques ANSSI
+## Auteur
 
-🧪 5. Simulation et validation
-Modélisation du réseau sur Cisco Packet Tracer
-Tests de connectivité et cohérence logique
-
-👉 Compétences : virtualisation réseau, test et validation
-
-📅 6. Planification du projet
-Création d’un diagramme de Gantt :
-tâches
-responsables
-durée
-jalons de validation
-
-👉 Compétences : gestion de projet (méthode en cascade), organisation
-
-🧾 7. Production des livrables
-Schéma physique (draw.io)
-Schéma logique (draw.io)
-Plan d’adressage (Excel)
-Diagramme de Gantt (PDF)
-DAT complété
-
-👉 Compétences : documentation technique, outils pro
-
-🎯 8. Présentation et validation finale
-Présentation de l’architecture réseau
-Justification des choix techniques
-Mise en avant de la scalabilité et de la sécurité
-
-👉 Compétences : communication technique, argumentation, synthèse
-
-🧠 Résumé global des compétences développées
-Conception d’architecture réseau TCP/IP
-VLAN et segmentation réseau
-Plan d’adressage IP
-Sécurité réseau (ANSSI)
-Outils (draw.io, Excel, Packet Tracer)
-Gestion de projet en cascade
-Documentation technique (DAT)
+**Thomas Pic** — Formation Administrateur Systèmes, Réseaux et Cybersécurité (Titre RNCP 40356), OpenClassrooms — Projet 1.
